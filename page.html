@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanafi NassarEddine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #4A90E2, #F5F5F5);
+    color: #333;
+    display: flex;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.sidebar {
+    background-color: #2C3E50;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    position: fixed;
+    left: 0;
+}
+
+.sidebar a {
+    color: #ECF0F1;
+    text-decoration: none;
+    margin: 15px 0;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.sidebar a:hover {
+    color: #E74C3C;
+}
+
+.content {
+    margin-left: 270px;
+    padding: 40px;
+    max-width: 900px;
+    width: 100%;
+}
+
+.hero {
+    text-align: left;
+    color: #2C3E50;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    animation: fadeInUp 1.5s ease;
+}
+
+.hero p {
+    font-size: 1.3em;
+    font-weight: 300;
+    margin-top: 10px;
+    animation: fadeInUp 1.8s ease;
+}
+
+.section {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #2980B9;
+    border-bottom: 2px solid #2980B9;
+    display: inline-block;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 20px 0;
+    border: 4px solid #2980B9;
+}
+
+.hobbies-objectives {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hobbies-objectives h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #2980B9;
+}
+
+.hobbies-objectives ul, .hobbies-objectives ol {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+    font-size: 1.1em;
+    text-align: left;
+    color: #555;
+}
+
+.hobbies-objectives li {
+    margin-bottom: 5px;
+}
+
+.friends-table {
+    width: 100%;
+    color: #555;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+.friends-table th, .friends-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #BDC3C7;
+}
+
+.friends-table th {
+    color: #2980B9;
+    font-weight: 600;
+}
+
+.friends-table a {
+    color: #3498DB;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.friends-table a:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #BDC3C7;
+    color: #2C3E50;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #2980B9;
+    border: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+}
+
+.contact-form button:hover {
+    background-color: #E74C3C;
+}
+
+.success-message {
+    display: none;
+    color: #27AE60;
+    font-weight: 500;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <a href="#hero">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#hobbies-objectives">Hobbies & Objectives</a>
+    <a href="#friends">Friends</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<div class="content">
+    
+    <section class="hero" id="hero">
+        <h1>BENELGADA Yassine</h1>
+        <p>Software Engineer & Designer</p>
+    </section>
+
+    
+    <section class="section" id="about">
+        <h2>About Me</h2>
+        <img src="your-image.jpg" alt="Profile Image" class="profile-image">
+        <p>I am a passionate software engineer with a focus on innovation and creativity...</p>
+    </section>
+
+    
+    <section class="section hobbies-objectives" id="hobbies-objectives">
+        <h2>Hobbies & Objectives</h2>
+        <div>
+            <h3>Hobbies</h3>
+            <ul>
+                <li>Coding</li>
+                <li>Photography</li>
+                <li>Reading</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Objectives</h3>
+            <ol>
+                <li>Enhance software engineering skills</li>
+                <li>Contribute to open-source projects</li>
+                <li>Build impactful applications</li>
+            </ol>
+        </div>
+    </section>
+
+    
+    <section class="section" id="friends">
+        <h2>Friends</h2>
+        <table class="friends-table">
+            <tr><th>Name</th><th>Age</th><th>City</th><th>Profile</th></tr>
+            <tr><td>John Doe</td><td>25</td><td>New York</td><td><a href="https://example.com/johndoe" target="_blank">Profile</a></td></tr>
+            <tr><td>Jane Smith</td><td>24</td><td>Paris</td><td><a href="https://example.com/janesmith" target="_blank">Profile</a></td></tr>
+            <tr><td>Emily Johnson</td><td>23</td><td>Tokyo</td><td><a href="https://example.com/emilyjohnson" target="_blank">Profile</a></td></tr>
+        </table>
+    </section>
+
+    
+    <section class="section" id="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form" onsubmit="showSuccessMessage(event)">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+            <p class="success-message">Thank you! Your message has been sent.</p>
+        </form>
+    </section>
+</div>
+
+<script>
+    function showSuccessMessage(event) {
+        event.preventDefault();
+        document.querySelector('.success-message').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
